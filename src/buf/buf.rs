@@ -119,7 +119,7 @@ pub trait Buf {
         }
 
         if self.has_remaining() {
-            dst[0] = self.bytes().into();
+            dst[0] = self.bytes().into_iter().into();
             1
         } else {
             0
