@@ -194,7 +194,7 @@ pub trait BufMut {
         }
 
         if self.has_remaining_mut() {
-            dst[0] = self.bytes_mut().into();
+            dst[0] = self.bytes_mut().into_iter().into();
             1
         } else {
             0
